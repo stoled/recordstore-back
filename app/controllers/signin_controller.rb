@@ -14,7 +14,7 @@ class SigninController < ApplicationController
         httponly: true,
         secure: Rails.env.production?)
 
-      render json: { csrf: token[:csrf] }
+      render json: { csrf: tokens[:csrf] }
     else
       not_authorized
     end
